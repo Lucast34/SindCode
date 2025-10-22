@@ -1,6 +1,6 @@
 from django.urls import path
-from noticias.views import index
+from associados.views import index
 
 urlpatterns = [
-    path('cadassociado',index)
+    path('cadassociado/',index)
 ]
