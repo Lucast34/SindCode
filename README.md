@@ -55,3 +55,7 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Aprendi a vincular o post-it
 - Aprender Django Apps
 - O aplicativo do Django é como se fosse um módulo
+
+
+### **Aula 4: DRY (Don't Repeat Yourelf)**
+
