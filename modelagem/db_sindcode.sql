@@ -1,7 +1,5 @@
--- https://dontpad.com/sqlpramoer
-
-CREATE DATABASE IF NOT EXISTS sindcode;
-USE sindcode;
+CREATE DATABASE IF NOT EXISTS sindcode3;
+USE sindcode3;
 CREATE TABLE IF NOT EXISTS associado(
 	id_associado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cpf VARCHAR(20) NOT NULL,
@@ -9,7 +7,13 @@ CREATE TABLE IF NOT EXISTS associado(
     nome_completo VARCHAR(100) NOT NULL,
     nome_social VARCHAR(40),
     genero VARCHAR(1),
-    data_nascimento DATE NOT NULL
+    data_nascimento DATE NOT NULL   
+);
+
+CREATE TABLE IF NOT EXISTS autor(
+	id_autor INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(80) NOT NULL,
+    perfil TEXT	NOT NULL	
 );
 
 CREATE TABLE IF NOT EXISTS endereco(
@@ -22,17 +26,13 @@ CREATE TABLE IF NOT EXISTS endereco(
     bairro VARCHAR(80) NOT NULL,
     estado VARCHAR(80) NOT NULL,
     uf VARCHAR(2) NOT NULL,
-	 fk_endereco INT NOT NULL,
-    CONSTRAINT fk_associado_endereco FOREIGN KEY(fk_endereco) REFERENCES associado(id_associado)
+	fk_autor INT NOT NULL,
+	fk_associado INT NOT NULL,
+	CONSTRAINT fk_endereco_autor FOREIGN KEY(fk_autor) REFERENCES autor(id_autor),
+	CONSTRAINT fk_endereco_associado FOREIGN KEY(fk_associado) REFERENCES associado(id_associado)
 );
 
-CREATE TABLE IF NOT EXISTS autor(
-	id_autor INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(80) NOT NULL,
-    perfil TEXT	NOT NULL,
-    fk_endereco INT NOT NULL,
-    CONSTRAINT fk_autor_endereco FOREIGN KEY(fk_endereco) REFERENCES endereco(id_endereco)
-);
+
 
 CREATE TABLE IF NOT EXISTS categoria(
 	id_categoria INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -54,13 +54,18 @@ CREATE TABLE IF NOT EXISTS noticia(
 CREATE TABLE IF NOT EXISTS telefone(
 	id_telefone INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     telefone VARCHAR(20),
-    fk_telefone INT NOT NULL,
-    CONSTRAINT fk_associado_telefone FOREIGN KEY(fk_telefone) REFERENCES associado(id_associado)
+    fk_associado INT NOT NULL,
+	fk_autor INT NOT NULL,
+    CONSTRAINT fk_telefone_associado FOREIGN KEY(fk_associado) REFERENCES associado(id_associado),
+	CONSTRAINT fk_telefone_autor FOREIGN KEY(fk_autor) REFERENCES autor(id_autor)
 );
 
 CREATE TABLE IF NOT EXISTS email(
 	id_email INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) NOT NULL UNIQUE,
-    fk_email INT NOT NULL,
-    CONSTRAINT fk_associado_email FOREIGN KEY(fk_email) REFERENCES associado(id_associado)
+    fk_associado INT NOT NULL,
+	fk_autor INT NOT NULL,
+    CONSTRAINT fk_email_associado FOREIGN KEY(fk_associado) REFERENCES associado(id_associado),
+	CONSTRAINT fk_email_autor FOREIGN KEY(fk_autor) REFERENCES autor(id_autor)
 );
+
