@@ -56,6 +56,71 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Aprender Django Apps
 - O aplicativo do Django é como se fosse um módulo
 
+#### **Aula 4: DRY (Don´t Repeat Yourself)**
 
-### **Aula 4: DRY (Don't Repeat Yourelf)**
+- index - noticias (principal)
+- index - associados
+- extends
+- include
+- partials
 
+#### **Aula 5: Conclusão**
+
+- Um projeto Django é formado por um ou vários aplicativos
+- O Django nasceu para gerenciar conteúdo (indicado para portais e notícias) 
+- O Django é usado por grandes empresas (Netflix, Spotify, Instagram)
+- O Django é seguro, usa python, simples, prático
+- O Django é integrado (Admin, Segurança, Templates)
+- O Django é dividido em camadas
+  - MTV (Model, View, Template) 
+- Model é o modelo da aplicação
+- View é o controlador (requisições [request-response (HTTP)])
+- Template é a parte visual do sistema (HTML, CSS, ASSETS, STYLES, JS, BOOTSTRAP)
+- https://tailwindcss.com/ pode ser utilizado em uma camada junto com DTL
+- DTM (Django Template Language) - {%    %}
+
+#### **Módulo 2 -  Django ORM e ADMIN"**
+
+##### **Trabalhar com Dados**
+- Apresentação
+- Preparar o ambiente
+- Nomes Dinâmicos
+- Banco de Dados
+- ORM no Django
+- Criar dados
+- Models no Django
+- Migrations
+
+##### **Admin**
+- Acessar o banco
+- Passar referência
+- CRUD no Admin
+- Incluir Categoria na Noticia (1:N)
+- Makemigrations e migrate
+
+##### **Admin Avançado**
+
+- Personalizar admin
+- Funcionalidade de publicação
+- Incrementar o index (deixar o site bonito)
+
+##### **Imagens e Filtros**
+
+- Caminho para fotos (Galeria de Fotos)
+- Imagem "not found"
+- Alterar a imagem no template
+
+#### **Mecanismo de busca**
+
+- Funcionalidade de buscar
+- View de buscar
+- Autenticação e Autorização (Django Admin)
+
+#### **Conclusão**
+
+- Concluir
+- Tirando dúvidas
+- Provinha prática teorica de POO
+- GitHub
+- Linkedin
+- Vercel e Django
