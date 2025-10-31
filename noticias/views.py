@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from noticias.models import Categoria
 
 # funcao
 # se def dentro classe = metodo
@@ -10,6 +10,13 @@ from django.http import HttpResponse
 
 def index(request):
     # definindo um mock com dict
+
+    categorias = Categoria.objects.all()
+    return render(request,
+    'noticias/index.html',
+          {'cards':categorias})
+
+    """
     dados = {
 
         1: {"titulo": "Mulheres dev",
@@ -21,8 +28,5 @@ def index(request):
             "data_publicacao": "12/10/2025"
         }
     }
+    """
 
-
-    return render(request,
-    'noticias/index.html',
-          {'cards':dados})
