@@ -1,6 +1,7 @@
-{% extends 'noticias/base.html' %}
-{% load static %}
+{% extends 'noticias/base.html' %}  <!--DTL - Django Template Language -->
+{% load static  %}  <!--DTL - Django Template Language -->
 {% block content %}
+
 <div id="site">
 
     <div id="area">
@@ -8,42 +9,27 @@
             aqui é o slideshow
         </div>
         <div id="noticias">
+            {% for info in cards %}
 
-            {% for noticia_id, info in cards.items % }
-            <!---- primeira noticia---->
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="//e.snmc.io/i/300/s/53b9d260830a9f0f3d53316351ffa27c/10215530"
-                             class="img-fluid rounded-start" alt="Bruce Springsteen - Born in the U.S.A.">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{info.titulo}}</h5>
-                            <p class="card-text">{{info.conteudo}}</p>
-                            <p class="card-text"><small class="text-body-secondary">{{info.data_publicacao}}</small></p>
+                    <!---- primeira noticia---->
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="//e.snmc.io/i/300/s/53b9d260830a9f0f3d53316351ffa27c/10215530"
+                                     class="img-fluid rounded-start" alt="Bruce Springsteen - Born in the U.S.A.">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ info.nome }}</h5>
+                                    <p class="card-text"></p>
+                                    <p class="card-text"><small class="text-body-secondary"></small></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div> <!---- fim da primeira noticia---->
+                    </div> <!---- fim da primeira noticia---->
             {% endfor %}
-
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{% static 'assets/noticias/LONG.jpg'%}" class="img-fluid rounded-start" alt="Long img">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+
         <div id="juridico">
             aqui é o juridico
         </div>
@@ -56,9 +42,6 @@
         <div id="tv_sindcode">
             aqui é a tv sindcode
         </div>
-    </div>
-    <div id="rodape">
-        aqui é o rodape
     </div>
 </div>
 {% endblock %}
