@@ -18,6 +18,14 @@ class Categoria(models.Model):# a classe é um conjunto de objetos
     def __str__(self):
         return f"Categoria [nome={self.nome}]"
 
+class Autor(models.Model):
+    nome = models.CharField(max_length=80, null= False,blank=False)
+
+    perfil= models.TextField()
+
+    def __str__(self):
+        return  self.nome + self.perfil
+
 # Django ORM
 # Python e Flask: SQLAlchemy
 # Python e Django: Django ORM

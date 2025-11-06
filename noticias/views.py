@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from noticias.models import Categoria
+from  noticias.models import Autor
+
 
 # funcao
 # se def dentro classe = metodo
@@ -30,3 +32,7 @@ def index(request):
     }
     """
 
+
+def autores(request):
+    autores = Autor.objects.all()
+    return  render(request,'noticias/nossos_autores.html',{'autores':autores})
