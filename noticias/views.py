@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from noticias.models import Categoria
+from noticias.models import Categoria, Noticia
 from  noticias.models import Autor
 
 
@@ -10,7 +10,7 @@ from  noticias.models import Autor
 
 # Create your views here.
 
-def index(request):
+def categorias(request):
     # definindo um mock com dict
 
     categorias = Categoria.objects.all()
@@ -31,6 +31,10 @@ def index(request):
         }
     }
     """
+
+def index(request):
+        noticias = Noticia.objects.all()
+        return render(request,'noticias/index.html',{'noticias':noticias})
 
 
 def autores(request):

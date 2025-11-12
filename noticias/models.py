@@ -37,7 +37,7 @@ class Noticia(models.Model):
 
     destaque = models.CharField(max_length=5 , choices=[('0','0'),('1','1'),('2','2'),('3','3'),('4','4')], default='4')
 
-    foto = models.CharField(max_length=60, null=False, blank=False)
+    foto = models.ImageField(upload_to="fotos/%Y/%m/%d",null=False, blank=False)
 
     #Relacionamento N-1(Muitas Noticias para um Autor)
 
