@@ -40,3 +40,7 @@ def index(request):
 def autores(request):
     autores = Autor.objects.all()
     return  render(request,'noticias/nossos_autores.html',{'autores':autores})
+
+
+def buscar(request):
+    return render(request, template_name='noticias/buscar.html')
