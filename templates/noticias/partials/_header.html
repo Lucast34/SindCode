@@ -1,13 +1,16 @@
 {% load static %}
-
+{% block content %}
 <!-- 1. Header/Navegação Principal (Azul Escuro) -->
 <header class=" shadow-lg sticky-top z-1">
     <div class="container-fluid container-lg">
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a class="navbar-brand py-3 me-5" href="#">
-                    <span class="fs-3 fw-bolder">SINDCODE</span>
-                    <span class="fw-light">A Voz dos Djangueiros de Brasília</span>
-                </a>
+
+                 <form action="#">
+                      <a class="navbar-brand py-3 me-5" href="#">
+                        <span class="fs-3 fw-bolder">SINDCODE</span>
+                        <span class="fw-light">A Voz dos Djangueiros de Brasília</span>
+                      </a>
+                 </form>
 
                 <!-- Botão de colapso para mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +25,7 @@
                         <li class="nav-item"><a class="nav-link text-white-50" href="#">Publicações</a></li>
                         <li class="nav-item"><a class="nav-link text-white-50" href="#">Fale Conosco</a></li>
                     </ul>
-                    <form>
+                    <form action="{% url 'buscar' %}">
                         <input type="text" class="busca" name="buscar" placeholder="Digite sua busca">
                         <button type="submit">
                             <img src="#">
@@ -35,3 +38,4 @@
             </nav>
         </div>
 </header>
+{% endblock %}
