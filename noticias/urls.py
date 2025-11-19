@@ -10,5 +10,5 @@ urlpatterns = [
     path('',noticias,name="noticias"),
     path('autor/',autores),
     path("buscar",buscar, name="buscar"),
-    path("retornar", retornar, name="retonar")
+    path("retornar", retornar, name="retornar")
 ]+static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
