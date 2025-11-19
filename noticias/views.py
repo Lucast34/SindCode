@@ -32,7 +32,7 @@ def categorias(request):
     }
     """
 
-def index(request):
+def noticias(request):
         noticias = Noticia.objects.all()
         return render(request,'noticias/index.html',{'noticias':noticias})
 
@@ -43,4 +43,19 @@ def autores(request):
 
 
 def buscar(request):
-    return render(request, template_name='noticias/buscar.html')
+    noticias = Noticia.objects.all()
+
+    if 'buscar' in request.GET:
+
+        nome_buscar = request.GET["buscar"]
+
+        if nome_buscar:
+            noticias = noticias.filter(conteudo__icontains=nome_buscar)
+
+    return render(request, 'noticias/buscar.html', {'noticias':noticias})
+
+def retornar(request):
+
+    noticias = Noticia.objects.all()
+
+    return render(request, 'noticias/index.html', {'noticias':noticias})
