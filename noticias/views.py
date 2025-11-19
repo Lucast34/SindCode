@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 from noticias.models import Categoria, Noticia
 from  noticias.models import Autor
 
@@ -59,3 +58,9 @@ def retornar(request):
     noticias = Noticia.objects.all()
 
     return render(request, 'noticias/index.html', {'noticias':noticias})
+
+def noticias_detalhes(request, noticia_id):
+
+    noticias = get_object_or_404(Noticia, pk=noticia_id)
+
+    return render(request, 'noticias/detalhes.html', {'noticia': noticias})
