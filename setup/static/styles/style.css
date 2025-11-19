@@ -49,10 +49,10 @@ body{
         margin - distância externa
         padding - distãncia interna
     */
-
     margin-left:50px;
     float:
+}
 
-
-
+.buscar_icone{
+    margin-right:10px
 }

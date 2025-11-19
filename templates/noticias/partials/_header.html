@@ -5,11 +5,13 @@
     <div class="container-fluid container-lg">
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
 
-                 <form action="#">
-                      <a class="navbar-brand py-3 me-5" href="#">
-                        <span class="fs-3 fw-bolder">SINDCODE</span>
-                        <span class="fw-light">A Voz dos Djangueiros de Brasília</span>
-                      </a>
+                 <form action="{% url 'retornar' %}">
+                     <button type="submit">
+                         <a class="navbar-brand py-3 me-5" href="#">
+                            <span class="fs-3 fw-bolder">SINDCODE</span>
+                            <span class="fw-light">A Voz dos Djangueiros de Brasília</span>
+                         </a>
+                     </button>
                  </form>
 
                 <!-- Botão de colapso para mobile -->
