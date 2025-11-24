@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 # Estudar o que é orm (object relation mapper)
@@ -35,7 +36,14 @@ class Noticia(models.Model):
 
     data_publicacao = models.DateTimeField(null=False, blank=False)
 
-    destaque = models.CharField(max_length=5 , choices=[('0','0'),('1','1'),('2','2'),('3','3'),('4','4')], default='4')
+    destaque = models.IntegerField(
+        default=99, # A high default value means it's not a highlight unless set
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(5)
+        ],
+        help_text="Priority Rank (0 = High Priority, 5 = Low Priority). Articles outside this range will not be considered highlights."
+    )
 
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d",null=False, blank=False)
 
@@ -47,6 +55,10 @@ class Noticia(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+    def is_a_highlight(self):
+        # A helper method to check if the rank is within the highlight range (0-5)
+        return 0 <= self.priority_rank <= 5 
 
 # Django ORM
 # Python e Flask: SQLAlchemy
