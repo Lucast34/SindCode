@@ -36,14 +36,20 @@ class Noticia(models.Model):
 
     data_publicacao = models.DateTimeField(null=False, blank=False)
 
-    destaque = models.IntegerField(
-        default=99, # A high default value means it's not a highlight unless set
-        validators=[
-            MinValueValidator(0),
-            MaxValueValidator(5)
-        ],
-        help_text="Priority Rank (0 = High Priority, 5 = Low Priority). Articles outside this range will not be considered highlights."
-    )
+    destaque = models.CharField(
+           max_length=2,
+           choices=[
+               ('0', '0'),
+               ('1', '1'),
+               ('2', '2'),
+               ('3', '3'),
+               ('4', '4'),
+               ('5', '5')  # <--- MUST BE ADDED TO CHOICES
+           ],
+           default='5',  # <--- DEFAULT VALUE SET HERE
+           null=False,
+           blank=False
+       )
 
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d",null=False, blank=False)
 
