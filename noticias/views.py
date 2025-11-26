@@ -18,20 +18,6 @@ def categorias(request):
     'noticias/index.html',
           {'cards':categorias})
 
-    """
-    dados = {
-
-        1: {"titulo": "Mulheres dev",
-            "conteudo": "Mulheres programadoras em python",
-            "data_publicacao": "29/10/2025"
-        },
-        2: {"titulo": "Programadores kids",
-            "conteudo": "Programadoras em python no dia das crianças",
-            "data_publicacao": "12/10/2025"
-        }
-    }
-    """
-
 def noticias(request):
         noticias = Noticia.objects.all()
         return render(request,'noticias/index.html',{'noticias':noticias})
@@ -73,3 +59,14 @@ def noticias_detalhes(request, noticia_id):
     noticias = get_object_or_404(Noticia, pk=noticia_id)
 
     return render(request, 'noticias/detalhes.html', {'noticia': noticias})
+
+
+
+def todas_noticias(request):
+    todas_noticias = Noticia.objects.all().order_by('-data_publicacao')
+
+    context = {
+        'noticias': todas_noticias,
+        'titulo_pagina': 'Todas as Notícias Publicadas'
+    }
+    return render(request, 'noticias/buscar.html', context)
