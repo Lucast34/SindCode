@@ -50,13 +50,13 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - 3.1: boas práticas  da subfunção 2.1
 - 4.4: controle de versão da subfunção 2.1
 - Entre no site para gerar gitignore: https://www.toptal.com/developers/gitignore/api/django
-- Entre no github e crie novo repositório: https://github.com/Lucast34/SindCode
+- Entre no github e crie novo repositório: https://github.com/romulodf-cesar/sindcode
 - Usar commit especificando a tarefa do SCRUM: git commit -m "<<codigo-task>> <<mensagem>> <<#status>>"
 - Aprendi a vincular o post-it
 - Aprender Django Apps
 - O aplicativo do Django é como se fosse um módulo
 
-#### **Aula 4: DRY (Don´t Repeat Yourself)**
+#### ** Aula 4: DRY (Don't Repeat Yourself) - Não seja repetitivo"
 
 - index - noticias (principal)
 - index - associados
@@ -64,63 +64,198 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - include
 - partials
 
-#### **Aula 5: Conclusão**
+#### ** Aula 5: Aplicando Estilos"
 
 - Um projeto Django é formado por um ou vários aplicativos
-- O Django nasceu para gerenciar conteúdo (indicado para portais e notícias) 
-- O Django é usado por grandes empresas (Netflix, Spotify, Instagram)
-- O Django é seguro, usa python, simples, prático
-- O Django é integrado (Admin, Segurança, Templates)
-- O Django é dividido em camadas
-  - MTV (Model, View, Template) 
+- O Django nasceu para gerenciar conteúdo (indicado para portais e notícias)
+- O Django é usando por grandes empresas (Netflix, Spotify, Instagram)
+- O Django é seguro , pyhton, simples, prático, rápido
+- O Django é integrado (Admin,Segurança,Templates)
+- O Django é dívidido em camadas
+  - MVT (Model, View, Template)
 - Model é o modelo da aplicação
 - View é o controlador (requisições [request-response (HTTP)])
-- Template é a parte visual do sistema (HTML, CSS, ASSETS, STYLES, JS, BOOTSTRAP)
+- Template é a parte visual do sistema (HTML,CSS,ASSETS, STYLES,JS,BOOTSTRAP)
 - https://tailwindcss.com/ pode ser utilizado em uma camada junto com DTL
-- DTM (Django Template Language) - {%    %}
+- DTL (Django Template Language) - {%        %}
+- Aprendemos a configurar URLs e executar aplicação com servidor local
+- Aprendemos sobre HTML e suas principais TAGS
+- Aprendemos um pouco sobre cores e psicologia das cores e identidade visual
+- Aprendemos sobre div e sobre o uso de HTML header, main e footer
+- Aprendemos um pouco sobre fórmularios HTML
+- Aprendemos a gerar um layout com Gemini Canvas
+- Referência Layout: https://gemini.google.com/share/907d04b81dd0
+- GitHub do projeto: https://github.com/romulodf-cesar/sindcode
+-   /* 1. Definição das Cores Customizadas Bootstrap (Azul Escuro e Ciano) */
+        :root {
+           --bs-primary: #004080; /* Azul Escuro (Principal) */
+           --bs-info: #00bcd4;    /* Azul Ciano/Teal (Destaque) */
+           --bs-body-bg: #f8f9fa; /* Fundo Levemente Acinzentado */
+           --bs-font-sans-serif: 'Inter', sans-serif;
+        }
 
-#### **Módulo 2 -  Django ORM e ADMIN"**
 
-##### **Trabalhar com Dados**
-- Apresentação
-- Preparar o ambiente
-- Nomes Dinâmicos
-- Banco de Dados
-- ORM no Django
-- Criar dados
-- Models no Django
-- Migrations
+#### ** Módulo 2 -  Django ORM e ADMIN"
 
-##### **Admin**
-- Acessar o banco
-- Passar referência
-- CRUD no Admin
-- Incluir Categoria na Noticia (1:N)
-- Makemigrations e migrate
+##### ** Aula 6 -  Trabalhar com Dados
+- Apresentação -ok
+- Preparar o ambiente -ok 
+- Nomes Dinâmicos -ok
+- Banco de Dados - ok
+- ORM no Django -ok
+- Criar dados - ok 
+- Models no Django - ok
+- Migrations - ok
 
-##### **Admin Avançado**
+##### ** Aula 7 -  Admin
+- Acessar o banco - ok
+- Passar referência - ok
+- CRUD no Admin - ok
+- Incluir Categoria - ok
+- Makemigrations e migrate - ok
 
-- Personalizar admin
-- Funcionalidade de publicação
+Exercício: considerando que você já sabe incluir uma categoria, considere o modelo MER
+do nosso banco de dados e implemente VOCÊ SOZINHO a entidade Autor.
+
+Considerando nosso contexto a tabela Autor deverá nessa versão ter três campos
+id, nome, perfil.
+
+##### ** Admin Avançado
+
+- Personalizar admin - pendente (ok) - estudo dirigido.
+- Funcionalidade de publicação - 
+- (0 - destaque principal, 1,2,3,4 (destaque secundário) 5 geral)
 - Incrementar o index (deixar o site bonito)
 
-##### **Imagens e Filtros**
 
-- Caminho para fotos (Galeria de Fotos)
-- Imagem "not found"
-- Alterar a imagem no template
 
-#### **Mecanismo de busca**
+##### ** Imagens e Filtros
 
-- Funcionalidade de buscar
-- View de buscar
-- Autenticação e Autorização (Django Admin)
+- Caminho para fotos (Galeria de Fotos) - ok
+  - Noticia - ok
+- Imagem "not found" - ok
+- Alterar a imagem no template - ok
 
-#### **Conclusão**
+#### ** Mecanismo de busca
 
-- Concluir
-- Tirando dúvidas
-- Provinha prática teorica de POO
-- GitHub
-- Linkedin
-- Vercel e Django
+- Funcionalidade de buscar -ok
+- View de buscar - ok
+- Autenticação e Autorização (Django Admin) - pendente
+
+
+#### ** Conclusão 
+
+- Concluir - ok
+- Tirando dúvidas - ok
+- Provinha prática teorica de POO - ok
+- Apresentação do Sistema
+- GitHub - pendente
+- Linkedin - pendente
+- Vercel e Django - pendente
+
+
+# 📝 Checklist de Avaliação e Progresso do Projeto SindCode
+
+Este checklist acompanha o progresso de aprendizado e implementação do projeto, organizado por aulas e módulos.
+
+---
+
+## 🚀 Aula 1: Introdução à Metodologia e Ambientação
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Foco da UC** | Compreensão da Subfunção 2.1 e Padrão de Desempenho 2.1.1 (Conhecimento 1.0). | [ ] |
+| **Metodologia** | Estudo e aplicação do **SCRUM**. | [ ] |
+| **Projeto-Alvo** | Conhecimento dos módulos do site SindCode (Benefícios, Notícias, Galeria). | [ ] |
+| **Fundamentos** | Revisão de Paradigmas de Programação (Estruturado, OO, Funcional). | [ ] |
+| **Ambientação** | Preparação inicial do ambiente **Django/Python**. | [ ] |
+| **Configurações** | Definição de `LANGUAGE_CODE` e `TIME_ZONE`. | [ ] |
+| **Comandos** | Execução e entendimento de `django-admin startproject`. | [ ] |
+
+---
+
+## 🔒 Aula 2: Ferramentas de Gestão e Segurança do Ambiente
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Ferramentas Ágeis** | Análise e configuração de ferramentas (Jira/Kanban, Trello, Notion, etc.). | [ ] |
+| **Segurança** | Implementação de boas práticas para gerenciamento de credenciais. | [ ] |
+| **Variáveis de Ambiente** | Configuração de variáveis sensíveis utilizando o arquivo `.env`. | [ ] |
+| **SECRET_KEY** | Geração e isolamento da `SECRET_KEY` do Django. | [ ] |
+| **Dependências** | Instalação da biblioteca `python-dotenv`. | [ ] |
+| **Código-Chave** | Importação e carregamento da variável de ambiente no `settings.py`. | [ ] |
+
+---
+
+## 🛠️ Aula 3: Boas Práticas e Controle de Versão
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Boas Práticas** | Implementação das boas práticas da subfunção 2.1. | [ ] |
+| **Controle de Versão** | Geração e configuração do arquivo `.gitignore` (toptal API). | [ ] |
+| **GitHub** | Criação do repositório (`romulodf-cesar/sindcode`) e vinculação do projeto. | [ ] |
+| **Commits** | Uso de commits especificando a tarefa do SCRUM (`git commit -m "<> <> <<#status>>"`). | [ ] |
+| **Django Apps** | Compreensão da função de um **aplicativo (módulo)** no Django. | [ ] |
+
+---
+
+## 🔄 Aula 4: DRY (Don't Repeat Yourself)
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Princípio DRY** | Entendimento e aplicação do conceito **"Não seja repetitivo"**. | [ ] |
+| **Templates** | Uso da tag `{% extends %}` para herança de templates (estrutura principal). | [ ] |
+| **Templates** | Uso da tag `{% include %}` para inclusão de componentes (partials). | [ ] |
+| **Partials** | Identificação e criação de blocos reutilizáveis (como header, footer, etc.). | [ ] |
+
+---
+
+## 🎨 Aula 5: Aplicando Estilos
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Arquitetura** | Compreensão do modelo **MVT (Model, View, Template)**. | [ ] |
+| **Camada View** | Entendimento do fluxo de requisições `request-response (HTTP)`. | [ ] |
+| **Camada Template** | Uso de HTML, CSS, JS, Bootstrap e Tailwind CSS (opcional). | [ ] |
+| **DTL** | Aplicação e uso da **Django Template Language** (`{% %}`). | [ ] |
+| **URLs** | Configuração das URLs e execução da aplicação com servidor local. | [ ] |
+| **Layout** | Geração e implementação do layout base (Referência Layout: [Gemini Canvas](https://gemini.google.com/share/907d04b81dd0)). | [ ] |
+| **Estilos Custom** | Definição das Cores Customizadas Bootstrap (variáveis `--bs-primary`, `--bs-info`). | [ ] |
+
+---
+
+## 💾 Módulo 2 - Aula 6: Trabalhar com Dados
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **ORM** | Entendimento de como funciona o **ORM no Django**. | [ ] |
+| **Models** | Criação dos **Models** (entidades de dados) no Django. | [ ] |
+| **Migrations** | Execução de `makemigrations` e `migrate`. | [ ] |
+| **Dados** | Criação e manipulação básica de dados no banco. | [ ] |
+
+---
+
+## 👑 Módulo 2 - Aula 7: Admin
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Acesso ao Banco** | Acesso e compreensão da interface Admin. | [ ] |
+| **CRUD** | Implementação e teste de operações CRUD no Admin. | [ ] |
+| **Categorias** | Inclusão da entidade Categoria no Admin. | [ ] |
+| **Exercício - Autor** | Implementação da entidade **Autor** (`id`, `nome`, `perfil`) de forma autônoma. | [ ] |
+
+---
+
+## ➕ Tópicos Avançados e Conclusão
+
+| Tópico | Detalhes | Status |
+| :--- | :--- | :--- |
+| **Admin Avançado** | Personalização da interface Admin e funcionalidade de publicação. | [ ] |
+| **Index** | Incremento e melhoria visual do template `index`. | [ ] |
+| **Imagens** | Configuração do caminho e exibição de fotos (Galeria/Notícia) e imagem "not found". | [ ] |
+| **Mecanismo de Busca** | Implementação da funcionalidade e da View de busca. | [ ] |
+| **Segurança** | Estudo e aplicação de Autenticação e Autorização (Django Admin). | [ ] |
+| **Conclusão** | Realização da provinha prática/teórica de POO. | [ ] |
+| **Próximos Passos** | Planejamento de deploy (Vercel e Django) e atualização de perfis (GitHub, LinkedIn). | [ ] |
+
+Gabarito de Referência do Aluno Josias Alves , para pesquisa: https://github.com/zikes18/sindicode-web
