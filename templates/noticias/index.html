@@ -9,7 +9,7 @@
 
             <!-- Coluna Principal (Notícias e Textos) - Ocupa 2/3 da largura -->
             <div class="col-lg-8">
-                <h2 class="fs-3 fw-bold text-primary border-bottom border-info border-2 pb-2 mb-4">Últimas Notícias e Informes</h2>
+                <h2 class="fs-3 fw-bold text-primary border-bottom border-info border-2 pb-2 mb-4">Últimas Notícias e Informações</h2>
 
                 <!-- Card de Destaque -->
                 <!-- Lista Destaque -->
@@ -25,7 +25,7 @@
                     <div class="small text-muted mb-2">
                         <span class="fw-bold text-info">DESTAQUE</span>
                         <span>•</span>
-                        <span>25 de Outubro de 2025</span>
+                        <span>{{noticia.data_publicacao}}</span>
                     </div>
                     <h3 class="fs-3 fw-bolder mb-3 lh-sm">
                         <a href="#" class="text-primary text-decoration-none hover-info">
@@ -57,7 +57,7 @@
                         <div class="flex-grow-1">
                             <div class="small text-muted mb-1">{{noticia.categoria.nome}}</div>
                             <h4 class="fs-5 fw-bold mb-1">
-                                <a href="{% url 'detalhe_noticia' noticia.id %}" class="text-dark text-decoration-none hover-info">
+                                <a href="{% url 'noticias_detalhes' noticia.id %}" class="text-dark text-decoration-none hover-info">
                                     {{noticia.titulo}}
                                 </a>
                             </h4>
@@ -74,9 +74,9 @@
 
                 <!-- Botão Ver Mais Notícias -->
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary fw-semibold py-3 px-5 rounded-3 shadow-lg">
+                    <a href="{% url 'todas_noticias' %}" class="btn btn-primary fw-semibold py-3 px-5 rounded-3 shadow-lg" alt="Carregar todas notícias">
                         Carregar Mais Notícias
-                    </button>
+                    </a>
                 </div>
 
             </div>
