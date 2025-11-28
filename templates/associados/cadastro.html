@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina cadastro</title>
 </head>
 <body>
-    Pagina cadastro
+    <form action="{% url  'cadastro' %}" method="post">
+
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+            {{field}}
+        {% endfor %}
+        <button type="submit">cadastrar</button>
+    </form>
 </body>
 </html>
