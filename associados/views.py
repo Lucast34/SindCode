@@ -21,16 +21,16 @@ def cadastro(request):
         nome_social = form['nome_social'].value()
         genero = form['genero'].value()
         email = form['email'].value()
-        senha = form['senha'].value()
+        senha = form['senha_1'].value()
         
         if User.objects.filter(username=nome_completo).exists():
             return redirect('cadastro')
         
         associado = User.objects.create_user(
-            username=nome_completo,
-            email= email,
+            username = nome_completo,
+            email = email,
             password=senha
-        )
+            )
         associado.save()
         
         return redirect('login')
